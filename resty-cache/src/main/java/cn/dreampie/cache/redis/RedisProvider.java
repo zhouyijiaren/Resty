@@ -1,4 +1,4 @@
-package cn.dreampie.cache.redis;
+﻿package cn.dreampie.cache.redis;
 
 import cn.dreampie.cache.CacheEvent;
 import cn.dreampie.cache.CacheProvider;
@@ -72,7 +72,7 @@ public class RedisProvider extends CacheProvider {
         if (host != null) {
           hp = host.split(":");
           if(hp.length >= 3){
-        	pool = new JedisPool(poolConfig, hp[0], Integer.parseInt(hp[1]), timeout, hp[2]);
+            pool = new JedisPool(poolConfig, hp[0], Integer.parseInt(hp[1]), timeout, hp[2]);
           } else {
             pool = new JedisPool(poolConfig, hp[0], Integer.parseInt(hp[1]), timeout);
           }
